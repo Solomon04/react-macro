@@ -38,10 +38,10 @@ const CallToAction: FunctionComponent<Props> = ({
   return (
     <>
       <div className='tw-col-span-6'>
-        <h2 className='tw-font-medium tw-text-sm'>
+        <label className='tw-font-medium tw-text-sm'>
           Please enter your name and best email address so we can send your
           results, including a printable macronutrient document.{' '}
-        </h2>
+        </label>
       </div>
       <div className='tw-col-span-6 sm:tw-col-span-3'>
         <label
@@ -111,7 +111,7 @@ const CallToAction: FunctionComponent<Props> = ({
                           {option.title}
                           <span>
                             <Tooltip content={option.help} placement='top'>
-                              <QuestionMarkCircleIcon className='ml-1.5 text-gray-400 h-5 w-5' />
+                              <QuestionMarkCircleIcon className='tw-ml-1.5 tw-text-gray-400 tw-h-5 w-5' />
                             </Tooltip>
                           </span>
                         </RadioGroup.Label>
