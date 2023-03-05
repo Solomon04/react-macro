@@ -38,7 +38,7 @@ const CallToAction: FunctionComponent<Props> = ({
   return (
     <>
       <div className='col-span-6'>
-        <h2 className='font-semibold text-lg'>
+        <h2 className='font-medium text-base'>
           Please enter your name and best email address so we can send your
           results, including a printable macronutrient document.{' '}
         </h2>
