@@ -38,13 +38,13 @@ const CallToAction: FunctionComponent<Props> = ({
   return (
     <>
       <div className='col-span-6'>
-        <h2 className='font-semibold'>
+        <h2 className='font-semibold text-lg'>
           Please enter your name and best email address so we can send your
           results, including a printable macronutrient document.{' '}
         </h2>
       </div>
       <div className='col-span-6 sm:col-span-3'>
-        <label htmlFor='email' className='text-base font-medium text-gray-900'>
+        <label htmlFor='email' className='text-sm font-medium text-gray-900'>
           Name
         </label>
         <div className='mt-2'>
@@ -61,7 +61,7 @@ const CallToAction: FunctionComponent<Props> = ({
         </div>
       </div>
       <div className='col-span-6 sm:col-span-3'>
-        <label htmlFor='email' className='text-base font-medium text-gray-900'>
+        <label htmlFor='email' className='text-sm font-medium text-gray-900'>
           Email Address
         </label>
         <div className='mt-2'>
@@ -79,7 +79,7 @@ const CallToAction: FunctionComponent<Props> = ({
       </div>
       <div className='col-span-6'>
         <RadioGroup value={goal} onChange={setGoal}>
-          <RadioGroup.Label className='text-base font-medium text-gray-900'>
+          <RadioGroup.Label className='text-sm font-medium text-gray-900'>
             What are you looking to accomplish?
           </RadioGroup.Label>
 
@@ -140,7 +140,7 @@ const CallToAction: FunctionComponent<Props> = ({
       </div>
       <div className='col-span-6'>
         <RadioGroup value={callToAction} onChange={setCallToAction}>
-          <RadioGroup.Label className='text-base font-medium text-gray-900'>
+          <RadioGroup.Label className='text-sm font-medium text-gray-900'>
             What can we help you with?
           </RadioGroup.Label>
 
@@ -190,7 +190,7 @@ const CallToAction: FunctionComponent<Props> = ({
         </RadioGroup>
       </div>
       <div className='col-span-6'>
-        <label className='text-base font-medium text-gray-900'>
+        <label className='text-sm font-medium text-gray-900'>
           Are you interested in a one on one free initial health assessment with
           a Registered Dietitian that specializes in Weight Loss?
         </label>
@@ -208,7 +208,7 @@ const CallToAction: FunctionComponent<Props> = ({
               />
               <label
                 htmlFor='yes'
-                className='ml-3 block text-sm font-medium text-gray-700'>
+                className='ml-3 block text-xs font-medium text-gray-700'>
                 Yes
               </label>
             </div>
@@ -224,7 +224,7 @@ const CallToAction: FunctionComponent<Props> = ({
               />
               <label
                 htmlFor='sms'
-                className='ml-3 block text-sm font-medium text-gray-700'>
+                className='ml-3 block text-xs font-medium text-gray-700'>
                 No
               </label>
             </div>

@@ -33,7 +33,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
   return (
     <>
       <div className='col-span-2'>
-        <label htmlFor='unit' className='text-base font-medium text-gray-900'>
+        <label htmlFor='unit' className='text-sm font-medium text-gray-900'>
           Unit
         </label>
         <select
@@ -49,7 +49,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
       </div>
 
       <div className='col-span-2'>
-        <label htmlFor='gender' className='text-base font-medium text-gray-900'>
+        <label htmlFor='gender' className='text-sm font-medium text-gray-900'>
           Sex
         </label>
         <select
@@ -65,7 +65,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
       </div>
 
       <div className='col-span-2'>
-        <label htmlFor='weight' className='text-base font-medium text-gray-900'>
+        <label htmlFor='weight' className='text-sm font-medium text-gray-900'>
           Weight ({unit === 'Imperial' ? 'lbs' : 'kg'})
         </label>
         <div className=''>
@@ -84,7 +84,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
       </div>
 
       <div className='col-span-2'>
-        <label htmlFor='height' className='text-base font-medium text-gray-900'>
+        <label htmlFor='height' className='text-sm font-medium text-gray-900'>
           Height ({unit === 'Imperial' ? 'ft' : 'cm'})
         </label>
         {unit === 'Imperial' ? (
@@ -115,7 +115,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
       </div>
 
       <div className='col-span-2'>
-        <label htmlFor='age' className='text-base font-medium text-gray-900'>
+        <label htmlFor='age' className='text-sm font-medium text-gray-900'>
           Age
         </label>
         <input
@@ -130,9 +130,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
       </div>
 
       <div className='col-span-2'>
-        <label
-          htmlFor='body_fat'
-          className='text-base font-medium text-gray-900'>
+        <label htmlFor='body_fat' className='text-sm font-medium text-gray-900'>
           Body Fat Percentage (optional)
         </label>
         <input
