@@ -32,14 +32,16 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
 }) => {
   return (
     <>
-      <div className='col-span-2'>
-        <label htmlFor='unit' className='text-sm font-medium text-gray-900'>
+      <div className='tw-col-span-2'>
+        <label
+          htmlFor='unit'
+          className='tw-text-sm tw-font-medium tw-text-gray-900'>
           Unit
         </label>
         <select
           id='unit'
           name='unit'
-          className='mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-4 block text-sm font-medium text-gray-900 placeholder:text-sm'
+          className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
           onChange={(e) => setUnit(e.target.value)}
           value={unit}
           required={true}>
@@ -48,14 +50,16 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
         </select>
       </div>
 
-      <div className='col-span-2'>
-        <label htmlFor='gender' className='text-sm font-medium text-gray-900'>
+      <div className='tw-col-span-2'>
+        <label
+          htmlFor='gender'
+          className='tw-text-sm tw-font-medium tw-text-gray-900'>
           Sex
         </label>
         <select
           id='gender'
           name='gender'
-          className='mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-4 block text-sm font-medium text-gray-900 placeholder:text-sm'
+          className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
           onChange={(e) => setSex(e.target.value)}
           value={sex}
           required={true}>
@@ -64,8 +68,10 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
         </select>
       </div>
 
-      <div className='col-span-2'>
-        <label htmlFor='weight' className='text-sm font-medium text-gray-900'>
+      <div className='tw-col-span-2'>
+        <label
+          htmlFor='weight'
+          className='tw-text-sm tw-font-medium tw-text-gray-900'>
           Weight ({unit === 'Imperial' ? 'lbs' : 'kg'})
         </label>
         <div className=''>
@@ -74,7 +80,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
             min={5}
             name='weight'
             id='weight'
-            className='mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-4 block text-sm font-medium text-gray-900 placeholder:text-sm'
+            className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
             placeholder={unit === 'Imperial' ? 'lbs' : 'kg'}
             required={true}
             value={weight}
@@ -83,14 +89,16 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
         </div>
       </div>
 
-      <div className='col-span-2'>
-        <label htmlFor='height' className='text-sm font-medium text-gray-900'>
+      <div className='tw-col-span-2'>
+        <label
+          htmlFor='height'
+          className='tw-text-sm tw-font-medium tw-text-gray-900'>
           Height ({unit === 'Imperial' ? 'ft' : 'cm'})
         </label>
         {unit === 'Imperial' ? (
           <select
             name='height'
-            className='mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-4 block text-sm font-medium text-gray-900 placeholder:text-sm'
+            className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
             id='height'
             value={height}
             onChange={(e) => setHeight(e.target.value)}>
@@ -106,7 +114,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
             min={30}
             name='height'
             id='height'
-            className='mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-4 block text-sm font-medium text-gray-900 placeholder:text-sm'
+            className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
             placeholder={'cm'}
             value={height}
             onChange={(e) => setHeight(e.target.valueAsNumber)}
@@ -114,8 +122,10 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
         )}
       </div>
 
-      <div className='col-span-2'>
-        <label htmlFor='age' className='text-sm font-medium text-gray-900'>
+      <div className='tw-col-span-2'>
+        <label
+          htmlFor='age'
+          className='tw-text-sm tw-font-medium tw-text-gray-900'>
           Age
         </label>
         <input
@@ -123,14 +133,16 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           min={1}
           name='age'
           id='age'
-          className='mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-4 block text-sm font-medium text-gray-900 placeholder:text-sm'
+          className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
           value={age}
           onChange={(e) => setAge(e.target.valueAsNumber)}
         />
       </div>
 
-      <div className='col-span-2'>
-        <label htmlFor='body_fat' className='text-sm font-medium text-gray-900'>
+      <div className='tw-col-span-2'>
+        <label
+          htmlFor='body_fat'
+          className='tw-text-sm tw-font-medium tw-text-gray-900'>
           Body Fat Percentage (optional)
         </label>
         <input
@@ -138,7 +150,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           min={2}
           name='body_fat'
           id='body_fat'
-          className='mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-4 block text-sm font-medium text-gray-900 placeholder:text-sm'
+          className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
           value={bodyFatPercentage}
           max={60}
         />

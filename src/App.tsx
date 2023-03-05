@@ -180,10 +180,10 @@ export default function App() {
             {/*  ) : null}*/}
             {/*</div>*/}
 
-            <div className='flex items-center justify-end mt-5 space-x-4'>
+            <div className='tw-flex tw-items-center tw-justify-end tw-mt-5 tw-space-x-4'>
               <Button disabled={!isValid} variant='solid' type='submit'>
                 {lastStep ? 'See Results' : 'Next'}{' '}
-                <ArrowRightCircleIcon className='w-5 h-5 ml-1 stroke-2' />
+                <ArrowRightCircleIcon className='tw-w-5 tw-h-5 tw-ml-1 tw-stroke-2' />
               </Button>
             </div>
           </form>
