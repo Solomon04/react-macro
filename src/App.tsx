@@ -126,7 +126,7 @@ export default function App() {
           <DietTable dietPlans={dietPlans} />
         ) : (
           <form onSubmit={(e) => handleSubmit(e)} className='tw-mt-5'>
-            <div className='grid grid-cols-1 sm:grid-cols-6 gap-8'>
+            <div className='tw-grid tw-grid-cols-1 sm:tw-grid-cols-6 tw-gap-8'>
               {/*Step One: Fill out your attributes*/}
               {currentStep.id === 1 ? (
                 <PastExperience
