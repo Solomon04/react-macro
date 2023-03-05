@@ -113,7 +113,7 @@ export default function App() {
   }, [currentStep])
 
   return (
-    <main className='tw-container tw-mx-auto tw-py-12 tw-px-4 sm:tw-px-0 tw-bg-black'>
+    <main className='tw-container tw-mx-auto tw-py-12 tw-px-4 sm:tw-px-0'>
       <Stepper
         isComplete={isCompleted}
         steps={steps}
@@ -126,59 +126,59 @@ export default function App() {
           <DietTable dietPlans={dietPlans} />
         ) : (
           <form onSubmit={(e) => handleSubmit(e)} className='tw-mt-5'>
-            {/*<div className='grid grid-cols-1 sm:grid-cols-6 gap-8'>*/}
-            {/*  /!*Step One: Fill out your attributes*!/*/}
-            {/*  {currentStep.id === 1 ? (*/}
-            {/*    <PastExperience*/}
-            {/*      weightliftingExperience={weightliftingExperience}*/}
-            {/*      setWeightliftingExperience={setWeightliftingExperience}*/}
-            {/*      macroTrackingExperience={macroTrackingExperience}*/}
-            {/*      setMacroTrackingExperience={setMacroTrackingExperience}*/}
-            {/*      isValid={(valid: boolean) => setIsValid(valid)}*/}
-            {/*    />*/}
-            {/*  ) : null}*/}
+            <div className='grid grid-cols-1 sm:grid-cols-6 gap-8'>
+              {/*Step One: Fill out your attributes*/}
+              {currentStep.id === 1 ? (
+                <PastExperience
+                  weightliftingExperience={weightliftingExperience}
+                  setWeightliftingExperience={setWeightliftingExperience}
+                  macroTrackingExperience={macroTrackingExperience}
+                  setMacroTrackingExperience={setMacroTrackingExperience}
+                  isValid={(valid: boolean) => setIsValid(valid)}
+                />
+              ) : null}
 
-            {/*  {currentStep.id === 2 ? (*/}
-            {/*    <PhysicalAttributes*/}
-            {/*      height={height}*/}
-            {/*      setHeight={setHeight}*/}
-            {/*      age={age}*/}
-            {/*      setAge={setAge}*/}
-            {/*      bodyFatPercentage={bodyFatPercentage}*/}
-            {/*      setBodyFatPercentage={setBodyFatPercentage}*/}
-            {/*      sex={sex}*/}
-            {/*      setSex={setSex}*/}
-            {/*      unit={unit}*/}
-            {/*      setUnit={setUnit}*/}
-            {/*      weight={weight}*/}
-            {/*      setWeight={setWeight}*/}
-            {/*    />*/}
-            {/*  ) : null}*/}
+              {currentStep.id === 2 ? (
+                <PhysicalAttributes
+                  height={height}
+                  setHeight={setHeight}
+                  age={age}
+                  setAge={setAge}
+                  bodyFatPercentage={bodyFatPercentage}
+                  setBodyFatPercentage={setBodyFatPercentage}
+                  sex={sex}
+                  setSex={setSex}
+                  unit={unit}
+                  setUnit={setUnit}
+                  weight={weight}
+                  setWeight={setWeight}
+                />
+              ) : null}
 
-            {/*  {currentStep.id === 3 ? (*/}
-            {/*    <TotalActivity*/}
-            {/*      activityLevel={activityLevel}*/}
-            {/*      setActivityLevel={setActivityLevel}*/}
-            {/*      isValid={(valid: boolean) => setIsValid(valid)}*/}
-            {/*    />*/}
-            {/*  ) : null}*/}
+              {currentStep.id === 3 ? (
+                <TotalActivity
+                  activityLevel={activityLevel}
+                  setActivityLevel={setActivityLevel}
+                  isValid={(valid: boolean) => setIsValid(valid)}
+                />
+              ) : null}
 
-            {/*  {currentStep.id === 4 ? (*/}
-            {/*    <CallToAction*/}
-            {/*      email={email}*/}
-            {/*      setEmail={setEmail}*/}
-            {/*      goal={goal}*/}
-            {/*      setGoal={setGoal}*/}
-            {/*      wantsConsulting={wantsConsulting}*/}
-            {/*      setWantsConsulting={setWantsConsulting}*/}
-            {/*      callToAction={callToAction}*/}
-            {/*      setCallToAction={setCallToAction}*/}
-            {/*      name={name}*/}
-            {/*      setName={setName}*/}
-            {/*      isValid={(valid: boolean) => setIsValid(valid)}*/}
-            {/*    />*/}
-            {/*  ) : null}*/}
-            {/*</div>*/}
+              {currentStep.id === 4 ? (
+                <CallToAction
+                  email={email}
+                  setEmail={setEmail}
+                  goal={goal}
+                  setGoal={setGoal}
+                  wantsConsulting={wantsConsulting}
+                  setWantsConsulting={setWantsConsulting}
+                  callToAction={callToAction}
+                  setCallToAction={setCallToAction}
+                  name={name}
+                  setName={setName}
+                  isValid={(valid: boolean) => setIsValid(valid)}
+                />
+              ) : null}
+            </div>
 
             <div className='tw-flex tw-items-center tw-justify-end tw-mt-5 tw-space-x-4'>
               <Button disabled={!isValid} variant='solid' type='submit'>
