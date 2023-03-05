@@ -47,7 +47,7 @@ const PastExperience: FunctionComponent<Props> = ({
                   classNames(
                     checked ? 'border-transparent' : 'border-gray-300',
                     active ? 'border-primary-500 ring-2 ring-primary-500' : '',
-                    'relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none'
+                    'relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm'
                   )
                 }>
                 {({ checked, active }) => (
@@ -105,7 +105,7 @@ const PastExperience: FunctionComponent<Props> = ({
                   classNames(
                     checked ? 'border-transparent' : 'border-gray-300',
                     active ? 'border-primary-500 ring-2 ring-primary-500' : '',
-                    'relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none'
+                    'relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm'
                   )
                 }>
                 {({ checked, active }) => (
