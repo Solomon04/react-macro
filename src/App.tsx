@@ -80,17 +80,13 @@ export default function App() {
 
       setDietPlans([balanced, lowCarb, highCarb, keto])
 
-      // Send email to the backend
-      console.log('Send email to ConvertKIT via API', {
-        email: email,
-        name: name,
-      })
-      console.log('Ping sendgrid dynamic template via API', {
-        email: email,
-        tdee: tdee,
-        wantsConsulting: wantsConsulting,
-        goal: goal,
-        callToAction: callToAction,
+      const myHeaders = new Headers()
+      myHeaders.append('Content-Type', 'application/json')
+
+      const raw = JSON.stringify({
+        email,
+        full_name: name,
+        tdee,
         diets: {
           balanced,
           lowCarb,
@@ -99,6 +95,16 @@ export default function App() {
           keto,
         },
       })
+
+      fetch('/wp-json/macro/v1/submit', {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow',
+      })
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log('error', error))
 
       setTdee(tdee)
       setBmr(bmr)
