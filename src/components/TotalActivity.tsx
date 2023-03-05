@@ -27,7 +27,7 @@ const TotalActivity: FunctionComponent<Props> = ({
             What are your day-to-day activity levels?
           </RadioGroup.Label>
 
-          <div className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'>
+          <div className='tw-mt-4 tw-grid tw-grid-cols-1 tw-gap-y-6 sm:tw-grid-cols-3 sm:tw-gap-x-4'>
             {activityLevelOptions.map((option) => (
               <RadioGroup.Option
                 key={option.id}
@@ -38,7 +38,7 @@ const TotalActivity: FunctionComponent<Props> = ({
                     active
                       ? 'tw-border-primary-500 tw-ring-2 tw-ring-primary-500'
                       : '',
-                    'tw-relative tw-flex tw-cursor-pointer tw-rounded-lg tw-border tw-bg-white tw-p-4 tw-shadow-sm '
+                    'tw-relative tw-flex tw-cursor-pointer tw-rounded-lg tw-border tw-bg-white tw-p-4 tw-shadow-sm focus:tw-outline-none'
                   )
                 }>
                 {({ checked, active }) => (

@@ -208,7 +208,7 @@ const CallToAction: FunctionComponent<Props> = ({
         </label>
         <fieldset className='tw-mt-4'>
           <legend className='tw-sr-only'>Notification method</legend>
-          <div className='space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-10'>
+          <div className='tw-space-y-4 sm:tw-flex sm:tw-items-center sm:tw-space-y-0 sm:tw-space-x-10'>
             <div className='tw-flex tw-items-center'>
               <input
                 id='yes'
@@ -216,7 +216,7 @@ const CallToAction: FunctionComponent<Props> = ({
                 onChange={(e) => setWantsConsulting(e.target.checked)}
                 checked={wantsConsulting}
                 type='radio'
-                className='h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-500'
+                className='tw-h-4 tw-w-4 tw-border-gray-300 tw-text-primary-600 focus:tw-ring-primary-500'
               />
               <label
                 htmlFor='yes'
@@ -232,7 +232,7 @@ const CallToAction: FunctionComponent<Props> = ({
                 checked={!wantsConsulting}
                 onChange={(e) => setWantsConsulting(!e.target.checked)}
                 type='radio'
-                className='h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-500'
+                className='tw-h-4 tw-w-4 tw-border-gray-300 tw-text-primary-600 focus:tw-ring-primary-500'
               />
               <label
                 htmlFor='sms'
