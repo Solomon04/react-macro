@@ -20,9 +20,9 @@ type MacroSelectOption = {
 
 type DietPlan = {
   name: string
-  fat: number | string
+  fats: number | string
   carbs: number | string
-  protein: number | string
+  proteins: number | string
   calories: number | string
 }
 
