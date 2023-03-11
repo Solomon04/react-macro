@@ -85,7 +85,7 @@ export default function App() {
       const raw = JSON.stringify({
         email,
         full_name: name,
-        tdee,
+        tdee: tdee.toFixed(0),
         diets: {
           balanced: balanced,
           low_carb: lowCarb,
