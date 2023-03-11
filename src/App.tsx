@@ -77,7 +77,7 @@ export default function App() {
       let highProtein = highProteinFormula(tdee + goal.net)
       let keto = ketoFormula(tdee + goal.net)
 
-      setDietPlans([balanced, lowCarb, highCarb, keto])
+      setDietPlans([balanced, lowCarb, highCarb, highProtein, keto])
 
       const myHeaders = new Headers()
       myHeaders.append('Content-Type', 'application/json')
