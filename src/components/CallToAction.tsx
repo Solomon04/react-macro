@@ -3,7 +3,7 @@ import { consultingOptions, goalOptions } from '../data'
 import { RadioGroup } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 import { classNames } from '../utils'
-import { Tooltip } from 'flowbite-react'
+import { FlowbiteTooltipTheme, Tooltip } from 'flowbite-react'
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline'
 
 type Props = {
@@ -35,12 +35,33 @@ const CallToAction: FunctionComponent<Props> = ({
   useEffect(() => {
     isValid(!!goal && !!callToAction)
   }, [callToAction, setCallToAction, goal, setGoal])
+  const theme: FlowbiteTooltipTheme = {
+    target: 'tw-w-fit',
+    animation: 'tw-transition-opacity',
+    arrow: {
+      base: 'tw-absolute tw-z-10 tw-h-2 tw-w-2 tw-rotate-45',
+      style: {
+        dark: 'tw-bg-gray-900 dark:tw-bg-gray-700',
+        light: 'tw-bg-white',
+        auto: 'tw-bg-white dark:tw-bg-gray-700',
+      },
+      placement: '-4px',
+    },
+    base: 'tw-absolute tw-inline-block tw-z-10 tw-rounded-lg tw-py-2 tw-px-3 tw-text-sm tw-font-medium tw-shadow-sm',
+    hidden: 'tw-invisible tw-opacity-0',
+    style: {
+      dark: 'tw-bg-gray-900 tw-text-white dark:tw-bg-gray-700',
+      light: 'tw-border tw-border-gray-200 tw-bg-white tw-text-gray-900',
+      auto: 'tw-border tw-border-gray-200 tw-bg-white tw-text-gray-900 dark:tw-border-none dark:tw-bg-gray-700 dark:tw-text-white',
+    },
+    content: 'tw-relative tw-z-20',
+  }
   return (
     <>
       <div className='tw-col-span-6'>
         <label className='tw-font-medium tw-text-sm'>
           Please enter your name and best email address so we can send your
-          results, including a printable macronutrient document.{' '}
+          results.
         </label>
       </div>
       <div className='tw-col-span-6 sm:tw-col-span-3'>
@@ -110,7 +131,10 @@ const CallToAction: FunctionComponent<Props> = ({
                           className='tw-inline-flex tw-text-sm tw-font-medium tw-text-gray-900'>
                           {option.title}
                           <span>
-                            <Tooltip content={option.help} placement='top'>
+                            <Tooltip
+                              theme={theme}
+                              content={option.help}
+                              placement='top'>
                               <QuestionMarkCircleIcon className='tw-ml-1.5 tw-text-gray-400 tw-h-5 w-5' />
                             </Tooltip>
                           </span>
@@ -204,7 +228,7 @@ const CallToAction: FunctionComponent<Props> = ({
       <div className='tw-col-span-6'>
         <label className='tw-text-sm tw-font-medium tw-text-gray-900'>
           Are you interested in a one on one free initial health assessment with
-          a Registered Dietitian that specializes in Weight Loss?
+          a Registered Dietitian that specializes in weight loss?
         </label>
         <fieldset className='tw-mt-4'>
           <legend className='tw-sr-only'>Notification method</legend>

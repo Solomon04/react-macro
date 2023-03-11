@@ -72,7 +72,6 @@ export default function App() {
 
     if (goal) {
       let balanced = balancedFormula(tdee + goal.net)
-      console.log({ maintain: balancedFormula(tdee), balanced })
       let lowCarb = lowCarbFormula(tdee + goal.net)
       let highCarb = highCarbFormula(tdee + goal.net)
       let highProtein = highProteinFormula(tdee + goal.net)
@@ -88,10 +87,10 @@ export default function App() {
         full_name: name,
         tdee,
         diets: {
-          balanced,
-          lowCarb,
-          highCarb,
-          highProtein,
+          balanced: balanced,
+          low_carb: lowCarb,
+          high_carb: highCarb,
+          high_protein: highProtein,
           keto,
         },
       })
@@ -187,7 +186,10 @@ export default function App() {
             </div>
 
             <div className='tw-flex tw-items-center tw-justify-end tw-mt-5 tw-space-x-4'>
-              <Button disabled={!isValid} variant='solid' type='submit'>
+              <Button
+                disabled={!isValid && currentStep.id !== 2}
+                variant='solid'
+                type='submit'>
                 {lastStep ? 'See Results' : 'Next'}{' '}
                 <ArrowRightCircleIcon className='tw-w-5 tw-h-5 tw-ml-1 tw-stroke-2' />
               </Button>
