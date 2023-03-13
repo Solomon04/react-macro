@@ -93,6 +93,15 @@ export default function App() {
           high_protein: highProtein,
           keto,
         },
+        training_experience: weightliftingExperience,
+        macro_experience: macroTrackingExperience,
+        unit: unit,
+        weight: weight,
+        height: height,
+        activity_level: activityLevel,
+        call_to_action: callToAction,
+        goal: goal,
+        wants_consulting: wantsConsulting ? 'Yes' : 'No'
       })
 
       fetch('/wp-json/macro/v1/submit', {
