@@ -24,7 +24,7 @@ export default function App() {
   const [age, setAge] = useState(18)
   const [height, setHeight] = useState(72)
   const [weight, setWeight] = useState(180)
-  const [activityLevel, setActivityLevel] = useState()
+  const [activityLevel, setActivityLevel] = useState<any | null>()
   const [tdee, setTdee] = useState(0)
   const [bmr, setBmr] = useState<number | undefined>()
   const [bodyFatPercentage, setBodyFatPercentage] = useState()
@@ -39,7 +39,7 @@ export default function App() {
   >(null)
   const [dietPlans, setDietPlans] = useState<DietPlan[]>([])
   const [goal, setGoal] = useState<WeightGoal | null>(null)
-  const [callToAction, setCallToAction] = useState()
+  const [callToAction, setCallToAction] = useState<any | null>()
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [wantsConsulting, setWantsConsulting] = useState(false)
@@ -93,15 +93,15 @@ export default function App() {
           high_protein: highProtein,
           keto,
         },
-        training_experience: weightliftingExperience,
-        macro_experience: macroTrackingExperience,
+        training_experience: weightliftingExperience.title,
+        macro_experience: macroTrackingExperience.title,
         unit: unit,
         weight: weight,
         height: height,
-        activity_level: activityLevel,
-        call_to_action: callToAction,
+        activity_level: activityLevel.title,
+        call_to_action: callToAction.title,
         goal: goal,
-        wants_consulting: wantsConsulting ? 'Yes' : 'No'
+        wants_consulting: wantsConsulting ? 'Yes' : 'No',
       })
 
       fetch('/wp-json/macro/v1/submit', {
