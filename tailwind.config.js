@@ -26,4 +26,7 @@ module.exports = {
   },
   plugins: [require('@tailwindcss/forms'), require('flowbite/plugin')],
   prefix: 'tw-',
+  corePlugins: {
+    preflight: false,
+  }
 }
