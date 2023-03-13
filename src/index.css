@@ -24,4 +24,15 @@
       margin-top: 1em;
       margin-bottom: 1em;
     }
+
+    ol {
+        /* Use default browser styles for ol */
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+    
+      li {
+        /* Use default browser styles for li */
+        margin-bottom: 0.25em;
+      }
   }
