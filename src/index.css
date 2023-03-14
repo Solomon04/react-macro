@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: inherit;
+        font-weight: inherit;
+        margin: inherit;
+    }
+
+    p {
+        margin: inherit;
+    }
+
+    li {
+        margin: inherit;
+        list-style: disc; /* add list-style property to show bullet */
+    }
+
+    ol, ul {
+        margin: inherit;
+        padding-left: inherit;
+    }
+}
