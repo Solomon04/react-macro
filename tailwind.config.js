@@ -46,7 +46,4 @@ module.exports = {
     false,
   ],
   prefix: 'tw-',
-  corePlugins: {
-    preflight: false,
-  },
 }
