@@ -3,23 +3,65 @@
 @tailwind utilities;
 
 @layer base {
-    h1, h2, h3, h4, h5, h6 {
-        font-size: inherit;
-        font-weight: inherit;
-        margin: inherit;
+    h1 {
+        font-size: 3.6rem;
+        font-weight: bold;
+        margin: 2rem 0;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 3.2rem;
+        font-weight: bold;
+        margin: 1.5rem 0;
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 2.8rem;
+        font-weight: bold;
+        margin: 1rem 0;
+        line-height: 1.2;
+    }
+
+    h4 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin: 1rem 0;
+        line-height: 1.2;
+    }
+
+    h5 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 1rem 0;
+        line-height: 1.2;
+    }
+
+    h6 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin: 1rem 0;
+        line-height: 1.2;
     }
 
     p {
-        margin: inherit;
+        font-size: 1.6rem;
+        line-height: 1.4;
+        margin: 1rem 0;
     }
 
     li {
-        margin: inherit;
-        list-style: disc; /* add list-style property to show bullet */
+        font-size: 1.6rem;
+        line-height: 1.4;
+        margin: 0.5rem 0;
+        list-style-type: disc;
     }
 
-    ol, ul {
-        margin: inherit;
-        padding-left: inherit;
+    ol {
+        font-size: 1.6rem;
+        line-height: 1.4;
+        margin: 1rem 0;
+        list-style-type: decimal;
     }
 }
