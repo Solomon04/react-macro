@@ -22,6 +22,9 @@ module.exports = {
           DEFAULT: '#576f88',
         },
       },
+      fontFamily: {
+        sans: ['Josefin Sans'],
+      },
     },
   },
   plugins: [
