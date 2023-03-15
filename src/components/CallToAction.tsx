@@ -78,7 +78,7 @@ const CallToAction: FunctionComponent<Props> = ({
             placeholder='Your Name'
             value={name}
             onChange={(event) => setName(event.target.value)}
-            className='tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900 placeholder:tw-text-sm'
+            className='tw-form-input tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900 placeholder:tw-text-sm'
             required={true}
           />
         </div>
@@ -97,7 +97,7 @@ const CallToAction: FunctionComponent<Props> = ({
             placeholder='Your Email'
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            className='tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900 placeholder:tw-text-sm'
+            className='tw-form-input tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900 placeholder:tw-text-sm'
             required={true}
           />
         </div>
@@ -240,7 +240,7 @@ const CallToAction: FunctionComponent<Props> = ({
                 onChange={(e) => setWantsConsulting(e.target.checked)}
                 checked={wantsConsulting}
                 type='radio'
-                className='tw-h-4 tw-w-4 tw-border-gray-300 tw-text-primary-600 focus:tw-ring-primary-500'
+                className='tw-form-radio tw-h-4 tw-w-4 tw-border-gray-300 tw-text-primary-600 focus:tw-ring-primary-500'
               />
               <label
                 htmlFor='yes'
@@ -256,7 +256,7 @@ const CallToAction: FunctionComponent<Props> = ({
                 checked={!wantsConsulting}
                 onChange={(e) => setWantsConsulting(!e.target.checked)}
                 type='radio'
-                className='tw-h-4 tw-w-4 tw-border-gray-300 tw-text-primary-600 focus:tw-ring-primary-500'
+                className='tw-form-radio tw-h-4 tw-w-4 tw-border-gray-300 tw-text-primary-600 focus:tw-ring-primary-500'
               />
               <label
                 htmlFor='sms'

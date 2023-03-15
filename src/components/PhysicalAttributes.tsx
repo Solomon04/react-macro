@@ -39,9 +39,10 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           Unit
         </label>
         <select
+          style={{ padding: '.75rem' }}
           id='unit'
           name='unit'
-          className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
+          className='tw-form-input tw-mt-2 tw-cst-pf tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
           onChange={(e) => setUnit(e.target.value)}
           value={unit}
           required={true}>
@@ -57,9 +58,10 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           Sex
         </label>
         <select
+          style={{ padding: '.75rem' }}
           id='gender'
           name='gender'
-          className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
+          className='tw-form-select tw-cst-pf tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
           onChange={(e) => setSex(e.target.value)}
           value={sex}
           required={true}>
@@ -80,7 +82,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
             min={5}
             name='weight'
             id='weight'
-            className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
+            className='tw-form-input tw-mt-2 tw-cst-pf tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
             placeholder={unit === 'Imperial' ? 'lbs' : 'kg'}
             required={true}
             value={weight}
@@ -98,7 +100,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
         {unit === 'Imperial' ? (
           <select
             name='height'
-            className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
+            className='tw-form-input tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
             id='height'
             value={height}
             onChange={(e) => setHeight(e.target.value)}>
@@ -110,11 +112,12 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           </select>
         ) : (
           <input
+            style={{ padding: '.75rem' }}
             type='number'
             min={30}
             name='height'
             id='height'
-            className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
+            className='tw-form-input tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
             placeholder={'cm'}
             value={height}
             onChange={(e) => setHeight(e.target.valueAsNumber)}
@@ -129,11 +132,12 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           Age
         </label>
         <input
+          style={{ padding: '.75rem' }}
           type='number'
           min={1}
           name='age'
           id='age'
-          className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
+          className='tw-form-input tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
           value={age}
           onChange={(e) => setAge(e.target.valueAsNumber)}
         />
@@ -146,11 +150,12 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           Body Fat Percentage (optional)
         </label>
         <input
+          style={{ padding: '.75rem' }}
           type='number'
           min={2}
           name='body_fat'
           id='body_fat'
-          className='tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
+          className='tw-form-input tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
           value={bodyFatPercentage}
           max={60}
         />

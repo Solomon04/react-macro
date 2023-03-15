@@ -136,7 +136,7 @@ export default function App() {
   }, [currentStep])
 
   return (
-    <main className='tw-container tw-mx-auto tw-py-12 tw-px-4 sm:tw-px-0'>
+    <main className='tw-container tw-mx-auto tw-py-12 tw-px-4 sm:tw-px-0 tw-cst-pf'>
       <Stepper
         isComplete={isCompleted}
         steps={steps}

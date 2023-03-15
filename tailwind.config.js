@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // prefix: 'macro-',
   content: [
     // Or if using `src` directory:
     './src/**/*.{js,ts,jsx,tsx}',
@@ -23,9 +22,6 @@ module.exports = {
         },
       },
     },
-    fontFamily: {
-      body: ['"Josefin Sans"'],
-    },
   },
   plugins: [
     require('@tailwindcss/forms'),
@@ -33,4 +29,7 @@ module.exports = {
     require('@tailwindcss/typography'),
   ],
   prefix: 'tw-',
+  corePlugins: {
+    preflight: false,
+  },
 }
