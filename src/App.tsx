@@ -19,6 +19,7 @@ import {
   lowCarbFormula,
 } from './formulas/macros'
 import DietTable from './components/DietTable'
+import './index.css' // You can import Tailwind CSS styles here
 
 export default function App() {
   const [currentStep, setCurrentStep] = useState(steps[0])
