@@ -39,7 +39,6 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           Unit
         </label>
         <select
-          style={{ padding: '.75rem' }}
           id='unit'
           name='unit'
           className='tw-form-input tw-mt-2 tw-cst-pf tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
