@@ -58,7 +58,6 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           Sex
         </label>
         <select
-          style={{ padding: '.75rem' }}
           id='gender'
           name='gender'
           className='tw-form-select tw-cst-pf tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
@@ -112,7 +111,6 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           </select>
         ) : (
           <input
-            style={{ padding: '.75rem' }}
             type='number'
             min={30}
             name='height'
@@ -132,7 +130,6 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           Age
         </label>
         <input
-          style={{ padding: '.75rem' }}
           type='number'
           min={1}
           name='age'
@@ -150,7 +147,6 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           Body Fat Percentage (optional)
         </label>
         <input
-          style={{ padding: '.75rem' }}
           type='number'
           min={2}
           name='body_fat'
