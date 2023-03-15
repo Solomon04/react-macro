@@ -25,25 +25,9 @@ module.exports = {
     },
   },
   plugins: [
-    function ({ addBase }) {
-      addBase({
-        // Enable default browser styles for h1-h6, p, li, and ol
-        'h1, h2, h3, h4, h5, h6, p, li, ol': {
-          margin: 0,
-          padding: 0,
-          fontWeight: 'inherit',
-          fontSize: 'inherit',
-          lineHeight: 'inherit',
-          listStyleType: 'inherit',
-          fontFamily: 'inherit',
-          color: 'inherit',
-        },
-      })
-    },
     require('@tailwindcss/forms'),
     require('flowbite/plugin'),
     require('@tailwindcss/typography'),
-    false,
   ],
   prefix: 'tw-',
 }
