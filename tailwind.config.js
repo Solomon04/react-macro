@@ -23,7 +23,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Josefin Sans'],
+        sans: ['"Josefin Sans"'],
       },
     },
   },
