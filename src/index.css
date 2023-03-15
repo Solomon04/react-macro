@@ -1,3 +1,33 @@
-/*@tailwind base;*/
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        margin: inherit;
+    }
+
+    p {
+        margin: inherit;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    li {
+        list-style: inherit;
+    }
+
+    ol {
+        list-style-type: inherit;
+    }
+
+    ul {
+        list-style-type: inherit;
+    }
+}
