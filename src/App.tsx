@@ -4,7 +4,10 @@ import CallToAction from './components/CallToAction'
 import PastExperience from './components/PastExperience'
 import TotalActivity from './components/TotalActivity'
 import PhysicalAttributes from './components/PhysicalAttributes'
-import { ArrowRightCircleIcon } from '@heroicons/react/24/solid'
+import {
+  ArrowRightCircleIcon,
+  ArrowLeftCircleIcon,
+} from '@heroicons/react/24/solid'
 import Stepper from './components/Stepper'
 import Button from './components/Button'
 import { calculateTotalDailyExpenditure } from './formulas/tdee'
@@ -49,6 +52,11 @@ export default function App() {
   const incrementStep = () => {
     let stepIndex = currentStep.id - 1
     setCurrentStep(steps[stepIndex + 1])
+  }
+
+  const decrementStep = () => {
+    let stepIndex = currentStep.id - 1
+    setCurrentStep(steps[stepIndex - 1])
   }
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -195,6 +203,15 @@ export default function App() {
             </div>
 
             <div className='tw-flex tw-items-center tw-justify-end tw-mt-5 tw-space-x-4'>
+              <Button
+                disabled={currentStep.id === 1}
+                variant='solid'
+                onClick={decrementStep}
+                type='button'>
+                <ArrowLeftCircleIcon className='tw-w-5 tw-h-5 tw-mr-1 tw-stroke-2' />{' '}
+                Back
+              </Button>
+
               <Button
                 disabled={!isValid && currentStep.id !== 2}
                 variant='solid'
