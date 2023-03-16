@@ -91,10 +91,11 @@ export default function App() {
       const myHeaders = new Headers()
       myHeaders.append('Content-Type', 'application/json')
 
-      const raw = JSON.stringify({
+      const body = {
         email,
         full_name: name,
         tdee: tdee.toFixed(0),
+        calories: balanced.calories,
         diets: {
           balanced: balanced,
           low_carb: lowCarb,
@@ -111,12 +112,12 @@ export default function App() {
         call_to_action: callToAction.title,
         goal: goal,
         wants_consulting: wantsConsulting ? 'Yes' : 'No',
-      })
+      }
 
       fetch('/wp-json/macro/v1/submit', {
         method: 'POST',
         headers: myHeaders,
-        body: raw,
+        body: JSON.stringify(body),
         redirect: 'follow',
       })
         .then((response) => response.text())

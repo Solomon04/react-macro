@@ -77,7 +77,8 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
         <div className=''>
           <input
             type='number'
-            min={5}
+            min={1}
+            step={0.1}
             name='weight'
             id='weight'
             className='tw-form-input tw-mt-2 tw-cst-pf tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
@@ -112,6 +113,7 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
           <input
             type='number'
             min={30}
+            step={0.1}
             name='height'
             id='height'
             className='tw-form-input tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
@@ -147,7 +149,8 @@ const PhysicalAttributes: FunctionComponent<Props> = ({
         </label>
         <input
           type='number'
-          min={2}
+          min={1}
+          step={0.1}
           name='body_fat'
           id='body_fat'
           className='tw-form-input tw-mt-2 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-primary focus:tw-ring-primary sm:tw-text-sm tw-p-4 tw-block tw-text-sm tw-font-medium tw-text-gray-900'
