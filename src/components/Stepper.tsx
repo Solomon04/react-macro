@@ -46,7 +46,7 @@ const Step: FunctionComponent<StepProp> = ({ name, completed, id }) => (
         <StepIcon id={id} />
       )}
     </div>
-    <span className='tw-text-xs sm:tw-text-sm'> {name} </span>
+    <span className='tw-hidden sm:tw-block'> {name} </span>
   </li>
 )
 
