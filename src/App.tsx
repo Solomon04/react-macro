@@ -110,7 +110,7 @@ export default function App() {
         height: height,
         activity_level: activityLevel.title,
         call_to_action: callToAction.title,
-        goal: goal,
+        goal: goal.title,
         wants_consulting: wantsConsulting ? 'Yes' : 'No',
       }
 
