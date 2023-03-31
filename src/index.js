@@ -5,6 +5,7 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 function removeLoader() {
+  console.log('remove loader')
   const loader = document.getElementById('root-loader')
   if (loader) {
     loader.remove()
