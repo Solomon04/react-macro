@@ -141,7 +141,12 @@ export default function App() {
     console.log({ final })
 
     const rootElement = document.getElementById('root')
-    rootElement.style = ''
+    if (rootElement) {
+      rootElement.style.width = ''
+      rootElement.style.height = ''
+      rootElement.style.backgroundColor = ''
+      rootElement.style.borderRadius = ''
+    }
   })
 
   return (
