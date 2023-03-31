@@ -139,6 +139,9 @@ export default function App() {
   useEffect(() => {
     const final = Date.now()
     console.log({ final })
+
+    const rootElement = document.getElementById('root')
+    console.log(rootElement)
   })
 
   return (
