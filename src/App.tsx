@@ -1,4 +1,4 @@
-import { FormEvent, useMemo, useState } from 'react'
+import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { steps } from './data'
 import CallToAction from './components/CallToAction'
 import PastExperience from './components/PastExperience'
@@ -135,6 +135,11 @@ export default function App() {
   const [lastStep] = useMemo(() => {
     return [currentStep.id === 4]
   }, [currentStep])
+
+  useEffect(() => {
+    const final = Date.now()
+    console.log({ final })
+  })
 
   return (
     <main className='tw-container tw-mx-auto tw-py-12 tw-px-4 sm:tw-px-0 tw-cst-pf'>
