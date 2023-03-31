@@ -4,29 +4,13 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-function removeLoader() {
-  console.log('remove loader')
-  const loader = document.getElementById('root-loader')
-  if (loader) {
-    loader.remove()
-  }
-}
 const root = ReactDOM.createRoot(document.getElementById('root'))
 const init = Date.now()
 console.log({ init })
 
 root.render(
   <React.StrictMode>
-    <div
-      id='root-loader'
-      style={
-        {
-          /* Skeleton loader styles */
-        }
-      }>
-      Loading...
-    </div>
-    <App onComponentLoaded={removeLoader} />
+    <App />
   </React.StrictMode>
 )
 

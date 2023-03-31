@@ -141,7 +141,7 @@ export default function App() {
     console.log({ final })
 
     const rootElement = document.getElementById('root')
-    console.log(rootElement)
+    rootElement.style = ''
   })
 
   return (
