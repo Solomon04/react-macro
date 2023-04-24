@@ -19,9 +19,11 @@ import {
   lowCarbFormula,
 } from './formulas/macros'
 import DietTable from './components/DietTable'
-import './index.css' // You can import Tailwind CSS styles here
+import './index.css'
+import { PopupWidget, PopupModal } from 'react-calendly' // You can import Tailwind CSS styles here
 
 export default function App() {
+  const [showCalendlyModal, setShowCalendlyModal] = useState(false)
   const [currentStep, setCurrentStep] = useState(steps[0])
   const [unit, setUnit] = useState<Unit>('Imperial')
   const [sex, setSex] = useState<Sex>('Male')
@@ -114,18 +116,19 @@ export default function App() {
         wants_consulting: wantsConsulting ? 'Yes' : 'No',
       }
 
-      fetch('/wp-json/macro/v1/submit', {
-        method: 'POST',
-        headers: myHeaders,
-        body: JSON.stringify(body),
-        redirect: 'follow',
-      })
-        .then((response) => response.text())
-        .then((result) => console.log(result))
-        .catch((error) => console.log('error', error))
+      // fetch('/wp-json/macro/v1/submit', {
+      //   method: 'POST',
+      //   headers: myHeaders,
+      //   body: JSON.stringify(body),
+      //   redirect: 'follow',
+      // })
+      //   .then((response) => response.text())
+      //   .then((result) => console.log(result))
+      //   .catch((error) => console.log('error', error))
 
       setTdee(tdee)
       setBmr(bmr)
+      setShowCalendlyModal(true)
     }
   }
   const handleStepper = (step: any) => {
@@ -160,7 +163,21 @@ export default function App() {
       <div className=''>
         {/*Results*/}
         {isCalculated && dietPlans.length > 0 ? (
-          <DietTable dietPlans={dietPlans} />
+          <>
+            {wantsConsulting && (
+              <PopupModal
+                prefill={{
+                  email: email,
+                  name: name,
+                }}
+                url='https://calendly.com/coach-brenda-peralta/health-assessment'
+                onModalClose={() => setShowCalendlyModal(false)}
+                open={showCalendlyModal}
+                rootElement={document.getElementById('root') as HTMLElement}
+              />
+            )}
+            <DietTable dietPlans={dietPlans} />
+          </>
         ) : (
           <form onSubmit={(e) => handleSubmit(e)} className='tw-mt-5'>
             <div className='tw-grid tw-grid-cols-1 sm:tw-grid-cols-6 tw-gap-8'>
