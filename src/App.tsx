@@ -144,9 +144,6 @@ export default function App() {
   }, [currentStep])
 
   useEffect(() => {
-    const final = Date.now()
-    console.log({ final })
-
     const rootElement = document.getElementById('root')
     if (rootElement) {
       rootElement.style.width = ''
@@ -159,8 +156,8 @@ export default function App() {
   useCalendlyEventListener({
     onEventScheduled: (e) => {
       const body = { email: email }
-      console.log({ body })
-      console.log({ e })
+      const myHeaders = new Headers()
+      myHeaders.append('Content-Type', 'application/json')
       fetch('/wp-json/macro/v1/calendly', {
         method: 'POST',
         body: JSON.stringify(body),

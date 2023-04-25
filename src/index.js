@@ -5,8 +5,6 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-const init = Date.now()
-console.log({ init })
 
 root.render(
   <React.StrictMode>
