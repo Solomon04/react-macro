@@ -20,7 +20,11 @@ import {
 } from './formulas/macros'
 import DietTable from './components/DietTable'
 import './index.css'
-import { PopupWidget, PopupModal } from 'react-calendly' // You can import Tailwind CSS styles here
+import {
+  PopupWidget,
+  PopupModal,
+  useCalendlyEventListener,
+} from 'react-calendly' // You can import Tailwind CSS styles here
 
 export default function App() {
   const [showCalendlyModal, setShowCalendlyModal] = useState(false)
@@ -150,6 +154,10 @@ export default function App() {
       rootElement.style.backgroundColor = ''
       rootElement.style.borderRadius = ''
     }
+  })
+
+  useCalendlyEventListener({
+    onEventScheduled: (e) => console.log(e.data.payload),
   })
 
   return (
