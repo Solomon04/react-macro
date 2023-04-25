@@ -157,7 +157,17 @@ export default function App() {
   })
 
   useCalendlyEventListener({
-    onEventScheduled: (e) => console.log(e.data.payload),
+    onEventScheduled: (e) => {
+      console.log(e)
+      fetch('/wp-json/macro/v1/calendly', {
+        method: 'POST',
+        body: JSON.stringify({ email }),
+        redirect: 'follow',
+      })
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log('error', error))
+    },
   })
 
   return (
