@@ -120,15 +120,15 @@ export default function App() {
         wants_consulting: wantsConsulting ? 'Yes' : 'No',
       }
 
-      // fetch('/wp-json/macro/v1/submit', {
-      //   method: 'POST',
-      //   headers: myHeaders,
-      //   body: JSON.stringify(body),
-      //   redirect: 'follow',
-      // })
-      //   .then((response) => response.text())
-      //   .then((result) => console.log(result))
-      //   .catch((error) => console.log('error', error))
+      fetch('/wp-json/macro/v1/submit', {
+        method: 'POST',
+        headers: myHeaders,
+        body: JSON.stringify(body),
+        redirect: 'follow',
+      })
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log('error', error))
 
       setTdee(tdee)
       setBmr(bmr)
